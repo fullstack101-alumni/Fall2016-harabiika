@@ -52,4 +52,5 @@ td:hover
     background-color: yellowgreen;
     filter:alpha(opacity=50);
     z-index: 10000;
+    display: none;
 }
