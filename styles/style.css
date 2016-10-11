@@ -3,6 +3,7 @@ body
 {
     font-family: arial;
     filter :  blur(0px);
+    background-color: lightgoldenrodyellow;
 }
 
 h1#doc-title {
@@ -38,7 +39,7 @@ th
 td:hover
 {
     cursor: pointer;
-    background: yellowgreen;
+    background: #FFB732;
     color: white;
 }
 
