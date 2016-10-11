@@ -7,9 +7,11 @@ $( "td" ).click(function() {
   $( "td" ).css({'pointer-events': 'none'});
 });
 
-$('#overlay').click(function(){
-  $( this ).slideUp();
+$('.buttons').click(function(){
+  $( '#overlay' ).slideUp();
    $('#main').css('filter' , 'blur(0px)');
    $( "td ").css({'pointer-events': 'auto'});
 });
+
+
 

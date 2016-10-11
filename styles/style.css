@@ -64,13 +64,29 @@ td:hover
 #takehour 
 {
     position:relative;
-    width : 40%;
-    left: 10%;
-    right: 10%;
+    width : 50%;
+    height : 20%;
+    top: 10%;
+    left: 25%;
+    right: 25%;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 10px;
 }
 
 #makefree
 {
    position:relative;
+   top: 40%;
+   left: 30%;
+   right: 30%;
    width : 40%;
+   background-color: red;
+   text-align: center;
+   height: 20%;
+   cursor: pointer;
+   border: 1px;
+   border-radius: 10px;
 }
