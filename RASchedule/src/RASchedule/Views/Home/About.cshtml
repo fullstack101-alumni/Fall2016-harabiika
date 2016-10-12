@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+
+<h1>Razor syntax demo</h1>
+
+<h2>@DateTime.Now</h2>
+
+
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year @:is a leap year.
+}
+else
+{
+    @DateTime.Now.Year @:is not a leap year.
+}
+
+
+
+@for (int i = 0; i < 10000; i++)
+{
+    @:I love Ketty <br />
+}
