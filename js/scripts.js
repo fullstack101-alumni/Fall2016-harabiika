@@ -2,7 +2,9 @@
 $( "td" ).click(function() {
   $("#overlay").slideDown();
   $("#overlay").css('display', 'inline');
-  $('#main').css('filter' , 'blur(4px)');
+  $('#main').css('filter' , 'blur(4px)'); 
+  $('#main').css('-webkit-filter', 'blur(4px)');
+  
   //$("td").addClass("disableHover");
   $( "td" ).css({'pointer-events': 'none'});
 });

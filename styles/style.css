@@ -3,6 +3,7 @@ body
 {
     font-family: arial;
     filter :  blur(0px);
+    -webkit-filter: blur(0px);
     background-color: lightgoldenrodyellow;
 }
 
@@ -89,4 +90,10 @@ td:hover
    cursor: pointer;
    border: 1px;
    border-radius: 10px;
+}
+
+#main
+{
+    filter : blur(0px);
+    -webkit-filter: blur(4px);
 }

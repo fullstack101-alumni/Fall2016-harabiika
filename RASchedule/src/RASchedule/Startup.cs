@@ -28,6 +28,7 @@ namespace RASchedule
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddTransient<MVC6_WEBAPI_MongoDB.Models.DataAccess>();
             services.AddMvc();
         }
 
@@ -55,6 +56,8 @@ namespace RASchedule
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
     }
 }
