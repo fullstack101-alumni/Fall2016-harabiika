@@ -40,7 +40,8 @@ textarea {
     
 body
 {
-    font-family: arial;
+    font-family: Candara, Calibri, Arial;
+    font-size: medium;
     filter :  blur(0px);
     background-color: lightgoldenrodyellow;
 }
@@ -136,3 +137,14 @@ td:hover
    border-radius: 10px;
    text-align: center;
 }
+
+
+form {
+    margin: 5% 10% 0 0;
+}
+
+    form > input {
+    margin: 1%;
+    }
+
+   

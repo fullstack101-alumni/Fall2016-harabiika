@@ -4,10 +4,8 @@
 }
 
 
-
-<form>
-    <div> e-mail </div> 
-    <input type="text" /> <br/>
-    <div> id </div>
-    <input type="text" /> <br/>
+<form asp-controller="..." asp-action="Register" method="post">
+    Email: <input type="email" name="email"><br>
+    ID: <input type="text" name="ID"><br>
+    <input type="submit" value="Submit">
 </form>
