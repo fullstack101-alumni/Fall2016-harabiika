@@ -1,9 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using RaSchedule.Models;
+using RaSchedule.Models.Products;
 using System.Collections.Generic;
 
-namespace MVC6_WEBAPI_MongoDB.Models
+namespace RaSchedule.Models.DataAccess
 {
     public class DataAccess
     {

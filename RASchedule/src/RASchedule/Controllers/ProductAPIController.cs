@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RaSchedule.Models;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-using MVC6_WEBAPI_MongoDB.Models;
 using MongoDB.Bson;
+using RaSchedule.Models.Products;
 
-namespace MVC6_WEBAPI_MongoDB.Controllers
+namespace RaSchedule.Controllers
 {
     [Route("api/Product")]
     public class ProductAPIController : Controller
     {
-        DataAccess objds;
+        RaSchedule.Models.DataAccess.DataAccess objds;
 
         public ProductAPIController()
         {

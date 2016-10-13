@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace MVC6_WEBAPI_MongoDB.Models
+namespace RaSchedule.Models.Products
 {
     public class Product
     {
