@@ -28,9 +28,6 @@ $(document).keydown(function (e) {
 
 $("#takehour").click(function (e) {
     if ($clicked.className != "NightDuty") {
-        // takes current count of hours from DB, 
-        // adds 1
-        // puts them again in the DB
 
         // take the id and put in the DB
         console.log($clicked.id);
@@ -40,7 +37,7 @@ $("#takehour").click(function (e) {
     }
 });
 
-// profile button send weekly report 
-// profile button send night duty report
-// a bot mail sends email to ilko
+// in profile button send weekly report 
+// in profile button send night duty report
+// a bot mail sends email to ilko (weekly or night duty report)
 // when weekly report is sent, current hours = 0, current duty days = 0
