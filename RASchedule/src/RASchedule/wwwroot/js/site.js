@@ -27,12 +27,17 @@ $(document).keydown(function (e) {
 });
 
 $("#takehour").click(function (e) {
-    // takes current count of hours from DB, 
-    // adds 1
-    // puts them again in the DB
+    if ($clicked.className != "NightDuty") {
+        // takes current count of hours from DB, 
+        // adds 1
+        // puts them again in the DB
 
-    // take the id and put in the DB
-    console.log($clicked.id);
+        // take the id and put in the DB
+        console.log($clicked.id);
+    }
+    else {
+        // enable night duty report
+    }
 });
 
 // profile button send weekly report 
