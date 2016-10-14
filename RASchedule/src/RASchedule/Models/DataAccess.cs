@@ -5,7 +5,7 @@ using RaSchedule.Models;
 using RaSchedule.Models.Products;
 using System.Collections.Generic;
 
-namespace RaSchedule.Models.DataAccess
+namespace RaSchedule.Models.DA
 {
     public class DataAccess
     {

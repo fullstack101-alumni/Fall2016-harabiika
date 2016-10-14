@@ -15,7 +15,7 @@ namespace RaSchedule.Controllers
     [Route("api/Product")]
     public class ProductAPIController : Controller
     {
-        RaSchedule.Models.DataAccess.DataAccess objds;
+        RaSchedule.Models.DA.DataAccess objds;
 
         public ProductAPIController()
         {
@@ -39,10 +39,11 @@ namespace RaSchedule.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]Product p)
+        public ActionResult CreateC([BindAttribute("ProductId, ProductName, Price, Category")] Product p)
         {
             objds.Create(p);
-            return new OkObjectResult(p);
+            return Redirect("Index");
+
         }
         [HttpPut("{id:length(24)}")]
         public IActionResult Put(string id, [FromBody]Product p)
