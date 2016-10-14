@@ -1,0 +1,59 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
+using RASchedule.Models;
+
+namespace RASchedule.Migrations
+{
+    [DbContext(typeof(RaContext))]
+    [Migration("20161014150027_RaMigration")]
+    partial class RaMigration
+    {
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .HasAnnotation("ProductVersion", "1.0.1")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("RASchedule.Models.Duty", b =>
+                {
+                    b.Property<int>("dutyId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("DutyDays");
+
+                    b.Property<int>("userId");
+
+                    b.HasKey("dutyId");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("Duties");
+                });
+
+            modelBuilder.Entity("RASchedule.Models.User", b =>
+                {
+                    b.Property<int>("userId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("email");
+
+                    b.Property<string>("name");
+
+                    b.HasKey("userId");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("RASchedule.Models.Duty", b =>
+                {
+                    b.HasOne("RASchedule.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+        }
+    }
+}

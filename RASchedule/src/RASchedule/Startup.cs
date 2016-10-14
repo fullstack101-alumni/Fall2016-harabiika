@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RASchedule.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace RASchedule
 {
@@ -28,8 +30,9 @@ namespace RASchedule
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddTransient<RaSchedule.Models.DA.DataAccess>();
             services.AddMvc();
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=RASchedule;Trusted_Connection=True;";
+            services.AddDbContext<RaContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
