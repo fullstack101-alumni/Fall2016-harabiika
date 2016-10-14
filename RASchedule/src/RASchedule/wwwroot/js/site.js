@@ -15,5 +15,10 @@ $('.buttons').click(function () {
     $("td ").css({ 'pointer-events': 'auto' });
 });
 
-
-
+$(document).keydown(function (e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+        $('#overlay').slideUp();
+        $("td ").css({ 'pointer-events': 'auto' });
+    }
+});
