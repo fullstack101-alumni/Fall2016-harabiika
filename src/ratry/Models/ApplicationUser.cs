@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ratry.Models
 {
@@ -15,8 +17,23 @@ namespace ratry.Models
     public class ApplicationUser : IdentityUser
     {
         public string aubgnumber { get; set; }
+        public DbSet<Duty> Duty { get; set; }
 
 
-       // var context = HttpContext.Current.GetOwinContext().Get<ApplicationDbContext>();
+
+        // var context = HttpContext.Current.GetOwinContext().Get<ApplicationDbContext>();
+    }
+
+    public class Duty
+    {
+        [Key]
+        public Guid DutyId { get; set; }
+
+        public string name { get; set; }
+        public string day { get; set; }
+        public int hour { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
     }
 }

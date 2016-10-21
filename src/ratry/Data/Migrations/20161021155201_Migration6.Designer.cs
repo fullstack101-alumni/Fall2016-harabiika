@@ -8,9 +8,10 @@ using ratry.Data;
 namespace ratry.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20161021155201_Migration6")]
+    partial class Migration6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -175,26 +176,6 @@ namespace ratry.Data.Migrations
                     b.ToTable("AspNetUser","Security");
                 });
 
-            modelBuilder.Entity("ratry.Models.Duty", b =>
-                {
-                    b.Property<Guid>("DutyId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("UserId");
-
-                    b.Property<string>("day");
-
-                    b.Property<int>("hour");
-
-                    b.Property<string>("name");
-
-                    b.HasKey("DutyId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Duty");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole")
@@ -230,13 +211,6 @@ namespace ratry.Data.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("ratry.Models.Duty", b =>
-                {
-                    b.HasOne("ratry.Models.ApplicationUser", "User")
-                        .WithMany("Duty")
-                        .HasForeignKey("UserId");
                 });
         }
     }
