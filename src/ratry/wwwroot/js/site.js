@@ -10,6 +10,8 @@ $("td").click(function () {
 
     //$("td").addClass("disableHover");
     $("td").css({ 'pointer-events': 'none' });
+
+    $("#InputDay").val($clicked.id);
 });
 
 $('.buttons').click(function () {

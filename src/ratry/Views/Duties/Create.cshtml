@@ -1,4 +1,6 @@
 @model ratry.Models.Duty
+@using System.Security.Claims
+
 
 @{
     ViewData["Title"] = "Create";
@@ -29,13 +31,13 @@
             <label asp-for="name" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="name" class="form-control" />
-                <span asp-validation-for="name" class="text-danger" />
+                @User.FindFirst(ClaimTypes.GivenName).Value
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+            </div> 
         </div>
     </div>
 </form>
