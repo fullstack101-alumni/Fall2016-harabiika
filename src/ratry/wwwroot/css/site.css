@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -106,7 +108,7 @@ h1#doc-title {
  text-align: center;
 }
 
-table
+table.schedule
 {
      margin: 3% auto;
 }
@@ -132,11 +134,17 @@ th
     padding: 0.5em 1em;
 }
 
-td:hover
+.schedule td:hover
 {
     cursor: pointer;
     background: #FFB732;
     color: white;
+}
+
+#login-msg {
+    text-align: center;
+    font-size: 6em;
+
 }
 
 #overlay {

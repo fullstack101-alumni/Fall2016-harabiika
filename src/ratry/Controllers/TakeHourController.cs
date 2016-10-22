@@ -38,7 +38,7 @@ namespace ratry.Controllers
                 duty.name = User.FindFirst(ClaimTypes.GivenName).Value;
                 _context.Add(duty);
                 await _context.SaveChangesAsync();
-                return RedirectToRoute(new { controller = "Manage", action = "Index" });
+                return RedirectToRoute(new { controller = "Duties", action = "MyHours" });
             }
             return View(duty);
         }

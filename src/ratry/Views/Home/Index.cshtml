@@ -12,7 +12,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <h1 id="doc-title">haRAbiyka Schedule</h1>
-    <table width="80%" align="center">
+    <table class="schedule" width="80%" align="center">
         <tr id="header">
             <th>Time</th>
             <th>Monday</th>
@@ -154,10 +154,6 @@
 }
 else
 {
-    <div> PLEASE LOG IN </div>
-
-    <a asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-    <a asp-area="" asp-controller="Account" asp-action="Login">Log in</a>
-
+    <div id="login-msg"> Please, log in or register to use the system. </div>
 }
 

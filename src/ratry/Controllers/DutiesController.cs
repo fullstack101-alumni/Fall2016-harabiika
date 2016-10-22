@@ -25,6 +25,11 @@ namespace ratry.Controllers
             return View(await _context.Duty.ToListAsync());
         }
 
+        public async Task<IActionResult> MyHours()
+        {
+            return View(await _context.Duty.ToListAsync());
+        }
+
         // GET: Duties/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
@@ -141,7 +146,7 @@ namespace ratry.Controllers
             var duty = await _context.Duty.SingleOrDefaultAsync(m => m.DutyId == id);
             _context.Duty.Remove(duty);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToRoute(new { controller = "Duties", action = "MyHours" });
         }
 
         private bool DutyExists(Guid id)

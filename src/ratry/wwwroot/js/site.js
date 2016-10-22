@@ -9,7 +9,7 @@ $("td").click(function () {
     $clicked = this;
 
     //$("td").addClass("disableHover");
-    $("td").css({ 'pointer-events': 'none' });
+    $("#schedule").css({ 'pointer-events': 'none' });
 
     $("#InputDay").val($clicked.id);
 });

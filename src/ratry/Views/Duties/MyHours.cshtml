@@ -1,0 +1,43 @@
+@using Microsoft.EntityFrameworkCore
+@using ratry.Models
+@using System.Security.Claims
+
+@model IEnumerable<ratry.Models.Duty>
+
+@{
+    ViewData["Title"] = "MyHours";
+}
+
+<h2>View</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Your Duties
+            </th>
+           
+      
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    if (item.name == User.FindFirst(ClaimTypes.GivenName).Value)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.day)
+            </td>
+          
+            <td>
+          
+                <a asp-action="Delete" asp-route-id="@item.DutyId">Delete</a>
+            </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>

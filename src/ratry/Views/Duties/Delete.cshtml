@@ -18,13 +18,7 @@
             @Html.DisplayFor(model => model.day)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.hour)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.hour)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.name)
+            Your ID
         </dt>
         <dd>
             @Html.DisplayFor(model => model.name)
@@ -34,7 +28,7 @@
     <form asp-action="Delete">
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
+            <a asp-action="MyHours">Back to List</a>
         </div>
     </form>
 </div>
